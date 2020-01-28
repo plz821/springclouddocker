@@ -1,0 +1,12 @@
+server:
+  port: 8012
+
+spring:
+  profiles: p2
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/,http://localhost:8002/eureka/

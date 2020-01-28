@@ -1,0 +1,15 @@
+server:
+  port: 9010
+
+spring:
+  profiles: docker
+
+eureka:
+  instance:
+    hostname: consumer-service
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8000/eureka/
