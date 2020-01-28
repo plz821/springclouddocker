@@ -1,6 +1,7 @@
 # Demo Project for Spring Cloud Docker
 本项目主要演示用Docker Compose编排Spring Cloud分布式应用。
 
+## 模块说明
 - common-model: 公用模型
 - eureka-server: 注册中心
 - provider-service: 服务提供者
