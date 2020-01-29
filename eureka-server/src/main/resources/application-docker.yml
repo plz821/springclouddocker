@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8000
 
 spring:
   profiles: docker
@@ -16,4 +16,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://localhost:8002/eureka/
+      defaultZone: http://eureka-server:8000/eureka/

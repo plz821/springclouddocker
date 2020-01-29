@@ -1,10 +1,11 @@
-version: '3'
+version: '2'
 services:
   eureka-server:
     restart: always
     build: ./eureka-server  # 创建镜像，会自动执行当前目录下eureka文件夹中的Dockerfile文件
     image: "plz821/eureka-server:v0.0.1"  # 镜像名：标签名
     hostname: eureka-server  # 注册中心的hostname一定要有，且必须和代码中配置文件里的hostname一致
+    mem_limit: 402653184  # 384M
     networks:
       - springcloud-docker-network  # 加入的网络，在networks节里创建
     environment:
@@ -16,6 +17,7 @@ services:
     restart: always
     build: ./provider-service
     image: "plz821/provider-service:v0.0.1"
+    mem_limit: 402653184  # 384M
     networks:
       - springcloud-docker-network
     environment:
@@ -31,6 +33,7 @@ services:
     restart: always
     build: ./consumer-service
     image: "plz821/consumer-service:v0.0.1"
+    mem_limit: 402653184  # 384M
     networks:
       - springcloud-docker-network
     environment:
